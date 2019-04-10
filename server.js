@@ -13,6 +13,9 @@ app.get('/',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render('about');
 });
+app.get('/home',(req,res)=>{
+    res.render('home');
+});
 app.get('/contact',(req,res)=>{
     res.render('contact');
 });
@@ -40,6 +43,14 @@ app.post('/login',(req,res)=>{
     else{
         res.send("failed")
     }
+})
+app.post('/register',(req,res)=>{
+    var name=req.body.name;
+    var adm=req.body.admno;
+    var email=req.body.email;
+    var pass=req.body.password;
+
+    res.send(name+adm+email+pass)
 })
 
 //var app=express();

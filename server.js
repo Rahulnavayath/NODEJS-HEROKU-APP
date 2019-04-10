@@ -50,7 +50,7 @@ app.post('/register',(req,res)=>{
     var email=req.body.email;
     var pass=req.body.password;
 
-    res.send(name+adm+email+pass)
+    res.send(name<br>+adm<br>+email<br>+pass)
 })
 
 //var app=express();

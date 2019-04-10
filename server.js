@@ -52,7 +52,7 @@ app.post('/login',(req,res)=>{
 //app.get('/contact',(req,res)=>{
    // res.send('[{"name": "Tom","age":23},{"name":"Riya","age":23}]');
 //})
-app.listen(3030,()=>{
+app.listen(process.env.PORT || 3030,()=>{
 
     console.log('Web app running successfully')
 });

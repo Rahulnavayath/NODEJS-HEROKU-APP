@@ -7,7 +7,7 @@ app.set('view engine','handlebars');
 app.use(express.static('views/static'));
 app.use(express.urlencoded());
 
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
     res.render('index',{name:'Rahul'});
 });
 app.get('/about',(req,res)=>{

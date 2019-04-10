@@ -38,10 +38,10 @@ app.post('/login',(req,res)=>{
     var pass=req.body.password;
 
     if(user=="admin"&&pass=="1234"){
-        res.send("success")
+        res.send(JSON.stringify({status: "success"}));
     }
     else{
-        res.send("failed")
+        res.send(JSON.stringify({status: "failed"}));
     }
 })
 app.post('/register',(req,res)=>{
@@ -50,7 +50,7 @@ app.post('/register',(req,res)=>{
     var email=req.body.email;
     var pass=req.body.password;
 
-    res.send(name<br>+adm<br>+email<br>+pass)
+    res.send(name+adm+email+pass)
 })
 
 //var app=express();
